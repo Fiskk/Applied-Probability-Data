@@ -1,0 +1,32 @@
+Individual commands:
+
+> md = median(as.numeric(skillcraft1dfsample$[comlumn name here]))
+> mv = mean(as.numeric(skillcraft1dfsample$[column name here]))
+>
+> hist(as.numeric(skillcraft1dfsample$[column name here]),main = "[title]",xlab="[x axis label]")
+> abline(v=md,col="blue")
+> abline(v=mv,col="red")
+>
+
+Or as a function:
+
+col must be the full dataframe and column name
+ex: skillcraft1df$TotalHours
+title and xlab must be in ""
+ex: "Title"
+copy including last empty line, paste commands only
+
+example function call
+ex: histfunction(skillcraft1df$TotalHours,"TotalHours,Freq","Total Hours")
+
+> histfunction <- function(col,title,xlab) {
+> md = median(as.numeric(col)) 
+> mv = mean(as.numeric(col))
+> hist(as.numeric(col),main= title, xlab= xlab)
+> abline(v=md,col="blue")
+> abline(v=mv,col="red")
+> }
+>
+
+
+
